@@ -9,7 +9,7 @@ export const Container = styled.footer`
   width: 100%;
   left: 0;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
 `;
 
 export const CreditsText = styled.p`

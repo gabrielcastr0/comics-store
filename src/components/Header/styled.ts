@@ -21,6 +21,11 @@ export const RightHeader = styled.div``;
 export const MenuOptions = styled.ul`
   list-style-type: none;
   display: flex;
+  gap: 15px;
+
+  a{
+    text-decoration: none;
+  }
 
   li{
     font-size: 20px;

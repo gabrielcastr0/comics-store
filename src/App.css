@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-  --background-marvel: #e23636;
+  --background: #504a4a;
+  --color-scrollbar: #e23636;
 }
 
 *{
@@ -11,5 +12,17 @@
 }
 
 body{
-  background: var(--background-marvel);
+  background: var(--background);
+}
+
+html::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+/* html::-webkit-scrollbar-track{
+  background: #333;
+} */
+
+html::-webkit-scrollbar-thumb{
+  background: var(--color-scrollbar);
 }
