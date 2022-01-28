@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+  --background-marvel: #e23636;
+}
+
 *{
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: var(--background-marvel);
 }
