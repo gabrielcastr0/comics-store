@@ -1,10 +1,10 @@
-import * as S from './styled';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import MarvelLogo from '../../assets/img/logo/marvel-logo.png';
+import MarvelLogo from "../../assets/img/logo/marvel-logo.png";
+import * as S from "./styled";
 
-export const Header = () => {
-  return(
+export function Header() {
+  return (
     <S.Container>
       <S.LeftHeader>
         <Link to="/">
@@ -28,5 +28,5 @@ export const Header = () => {
         </S.MenuOptions>
       </S.RightHeader>
     </S.Container>
-  )
+  );
 }

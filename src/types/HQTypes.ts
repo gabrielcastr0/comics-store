@@ -5,5 +5,5 @@ export type HQTypes = {
   thumbnail: {
     path: string;
     extension: string;
-  }
-}
+  };
+};

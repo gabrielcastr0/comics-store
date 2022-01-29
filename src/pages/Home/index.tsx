@@ -1,8 +1,5 @@
-import * as S from './styled';
+import * as S from "./styled";
 
-export const Home = () => {
-  return(
-    <S.Container>
-    </S.Container>
-  )
+export function Home() {
+  return <S.Container />;
 }

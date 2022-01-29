@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFF;
+  background: #fff;
   height: 100px;
   padding: 0 35px 0 35px;
 `;
@@ -23,20 +23,20 @@ export const MenuOptions = styled.ul`
   display: flex;
   gap: 15px;
 
-  a{
+  a {
     text-decoration: none;
   }
 
-  li{
+  li {
     font-size: 20px;
     color: #000;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       background: #e23636;
-      color: #FFF;
+      color: #fff;
     }
   }
 `;

@@ -1,19 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
   flex-direction: column;
-  color: #FFF;
+  color: #fff;
   height: 400px;
   width: 260px;
   background-color: #004433;
   box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
-  transition: all .17s ease-in-out;
+  transition: all 0.17s ease-in-out;
   border-radius: 10px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
     cursor: pointer;
   }
@@ -38,7 +38,7 @@ export const TitleCardArea = styled.div`
 `;
 
 export const TitleCard = styled.p`
-  color: #FFF;
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
   padding: 0 15px 0 15px;
