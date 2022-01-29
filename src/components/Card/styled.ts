@@ -12,6 +12,11 @@ export const Container = styled.div`
   box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
   transition: all .17s ease-in-out;
   border-radius: 10px;
+
+  &:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 `;
 
 export const ImageCard = styled.img`

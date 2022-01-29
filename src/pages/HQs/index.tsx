@@ -1,6 +1,8 @@
 import * as S from './styled';
 
 import {useEffect, useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import {Card} from '../../components/Card';
 
@@ -40,9 +42,19 @@ export const HQs = () => {
         <S.TitleSection>
           <h1>Histórias em Quadrinhos</h1>
         </S.TitleSection>
+        
         <S.CardArea>
           {displayComics}
         </S.CardArea>
+
+        {displayComics.length <= 0 && (
+          <S.LoadingArea>
+            <S.LoadingIcon>
+              <FontAwesomeIcon icon={faSpinner} size="3x" inverse className="spinner"/>
+            </S.LoadingIcon>
+          </S.LoadingArea>
+        )}
+
       </S.BodyArea>
     </S.Container>
   )

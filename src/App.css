@@ -11,6 +11,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+}
+
 body{
   background: var(--background);
   min-height: 100vh;
