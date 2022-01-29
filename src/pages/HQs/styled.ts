@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const BodyArea = styled.div`
 export const TitleSection = styled.div`
   display: flex;
   justify-content: center;
-  color: #FFF;
+  color: #fff;
 `;
 
 export const CardArea = styled.div`
@@ -28,7 +28,7 @@ export const CardArea = styled.div`
   max-width: 1100px;
   gap: 15px;
   flex-wrap: wrap;
-  margin: 35px 0 85px 0;
+  margin: 35px 0 150px 0;
 `;
 
 export const LoadingArea = styled.div`
@@ -51,11 +51,11 @@ export const LoadingIcon = styled.div`
   animation: spin infinite 5s linear;
 
   @keyframes spin {
-  from {
-    transform: rotate(0deg);
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 `;

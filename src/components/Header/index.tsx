@@ -19,7 +19,7 @@ export function Header() {
           </Link>
 
           <Link to="/hqs">
-            <li>HQ's</li>
+            <li>HQs</li>
           </Link>
 
           <Link to="/about">

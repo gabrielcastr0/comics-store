@@ -8,7 +8,7 @@ export const Container = styled.div`
   color: #fff;
   height: 400px;
   width: 260px;
-  background-color: #004433;
+  background-color: transparent;
   box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
   transition: all 0.17s ease-in-out;
   border-radius: 10px;
@@ -30,7 +30,7 @@ export const TitleCardArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #00000099;
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 260px;
   height: 80px;
