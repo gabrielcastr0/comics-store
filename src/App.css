@@ -13,6 +13,8 @@
 
 body{
   background: var(--background);
+  min-height: 100vh;
+  position: relative;
 }
 
 html::-webkit-scrollbar{

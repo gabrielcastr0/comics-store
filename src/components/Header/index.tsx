@@ -7,7 +7,9 @@ export const Header = () => {
   return(
     <S.Container>
       <S.LeftHeader>
-        <S.LogoHeader src={MarvelLogo} />
+        <Link to="/">
+          <S.LogoHeader src={MarvelLogo} />
+        </Link>
       </S.LeftHeader>
 
       <S.RightHeader>

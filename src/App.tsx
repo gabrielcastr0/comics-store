@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 
 import {Home} from './pages/Home';
+import {HQs} from './pages/HQs';
 
 export const App = () => {
   return(
@@ -14,7 +15,7 @@ export const App = () => {
       
       <Routes>
         <Route path="/" element={<Home />}/>
-        {/* <Route path="*" element={<NotFound />}/> */}
+        <Route path="/hqs" element={<HQs />}/>
       </Routes>
 
       <Footer />
