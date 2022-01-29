@@ -4,11 +4,13 @@ type Props = {
   image: string;
   subtitle: string;
   title: string;
+  clickFn: () => void;
 }
 
-export const Card = ({image, subtitle, title}:Props) => {
+export const Card = ({image, subtitle, title, clickFn}:Props) => {
+
   return(
-    <S.Container>
+    <S.Container onClick={clickFn}>
       <S.ImageCard src={image} alt={subtitle}/>
       <S.TitleCardArea>
         <S.TitleCard>{title}</S.TitleCard>

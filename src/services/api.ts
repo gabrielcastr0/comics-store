@@ -8,7 +8,7 @@ const ts = Number(new Date());
 
 const hash = md5(ts + privateKey + publicKey);
 
-const api = axios.create({
+const request = axios.create({
   baseURL: 'http://gateway.marvel.com/v1/public/',
   params: {
     ts,
@@ -16,5 +16,12 @@ const api = axios.create({
     hash,
   }
 });
+
+export const api = {
+  getAllComics: async () => {
+    const req = await request(`/comics`);
+    return req.data.data.results;
+  },
+}
 
 export default api;
