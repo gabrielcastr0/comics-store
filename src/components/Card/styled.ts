@@ -39,7 +39,7 @@ export const TitleCardArea = styled.div`
 
 export const TitleCard = styled.p`
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   padding: 0 15px 0 15px;
 `;

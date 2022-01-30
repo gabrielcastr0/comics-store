@@ -28,7 +28,7 @@ export const CardArea = styled.div`
   max-width: 1100px;
   gap: 15px;
   flex-wrap: wrap;
-  margin: 35px 0 150px 0;
+  margin: 25px 0 150px 0;
 `;
 
 export const LoadingArea = styled.div`

@@ -28,7 +28,7 @@ export const MenuOptions = styled.ul`
   }
 
   li {
-    font-size: 20px;
+    font-size: 25px;
     color: #000;
     padding: 10px;
     border-radius: 5px;

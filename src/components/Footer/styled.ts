@@ -15,5 +15,5 @@ export const Container = styled.footer`
 export const CreditsText = styled.p`
   color: #000;
   background: transparent;
-  font-size: 20px;
+  font-size: 25px;
 `;

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
 
 :root{
   --background: #504a4a;
@@ -8,7 +7,7 @@
 
 *{
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Marvel', sans-serif;
 }
 
 main{
@@ -25,10 +24,6 @@ body{
 html::-webkit-scrollbar{
   width: 0.5rem;
 }
-
-/* html::-webkit-scrollbar-track{
-  background: #333;
-} */
 
 html::-webkit-scrollbar-thumb{
   background: var(--color-scrollbar);
