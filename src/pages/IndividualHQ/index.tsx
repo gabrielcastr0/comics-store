@@ -1,6 +1,7 @@
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import api from "../../services/api";
@@ -10,6 +11,7 @@ export function IndividualHQ() {
   const [loading, setLoading] = useState(false);
   const [comic, setComic] = useState<any>({});
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   const loadComic = async (id: string | undefined) => {
     setLoading(true);
@@ -25,6 +27,13 @@ export function IndividualHQ() {
   useEffect(() => {
     loadComic(id);
   }, []);
+
+  const handleAddToCart = () => {
+    dispatch({
+      type: "ADD_PRODUCT",
+      payload: { comic },
+    });
+  };
 
   return (
     <S.Container>
@@ -68,7 +77,7 @@ export function IndividualHQ() {
             </S.DescriptionArea>
 
             <S.ButtonsArea>
-              <S.ButtonAddToCart type="button">
+              <S.ButtonAddToCart type="button" onClick={handleAddToCart}>
                 Adicionar ao Carrinho
               </S.ButtonAddToCart>
             </S.ButtonsArea>
