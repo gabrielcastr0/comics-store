@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react/no-array-index-key */
 import { faShoppingCart, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -37,7 +39,18 @@ export function Cart() {
       </S.CartHeader>
 
       <S.CartBody show={show}>
-        <div style={{ width: 50, height: 300, backgroundColor: "red" }} />
+        <S.ProductArea>
+          {products.map((item: any, index: number) => (
+            <S.ProductItem key={index}>
+              <S.ProductPhoto
+                src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
+              />
+              <S.ProductInfoArea>
+                <S.ProductName>{item.title}</S.ProductName>
+              </S.ProductInfoArea>
+            </S.ProductItem>
+          ))}
+        </S.ProductArea>
       </S.CartBody>
     </S.CartArea>
   );

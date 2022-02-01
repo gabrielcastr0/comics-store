@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const CartArea = styled.div`
-  background: red;
+  background: #e23636;
   position: fixed;
   bottom: 0;
   right: 30px;
@@ -18,7 +18,7 @@ export const CartHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 250px;
-  height: 40px;
+  height: 50px;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 10px 10px 0 0;
@@ -35,4 +35,26 @@ export const CartText = styled.p`
 
 export const CartBody = styled.div<Props>`
   display: ${(props) => (props.show ? "block" : "none")};
+`;
+
+export const ProductArea = styled.div``;
+
+export const ProductItem = styled.div`
+  display: flex;
+  margin: 10px;
+`;
+
+export const ProductPhoto = styled.img`
+  width: 64px;
+  height: auto;
+`;
+
+export const ProductInfoArea = styled.div`
+  flex: 1;
+  margin-left: 10px;
+`;
+
+export const ProductName = styled.div`
+  font-size: 15px;
+  color: #fff;
 `;
