@@ -1,6 +1,7 @@
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Card } from "../../components/Card";
 import { Pagination } from "../../components/Pagination";
@@ -23,14 +24,17 @@ export function HQs() {
   };
 
   const displayComics = currentComics.map((comics) => {
+    const storeImg = `${comics.thumbnail.path}.${comics.thumbnail.extension}`;
+
     return (
       <div key={comics.id}>
-        <Card
-          image={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}
-          subtitle={`Foto do ${comics.title}`}
-          title={`${comics.title}`}
-          clickFn={() => alert(`Title: ${comics.title} + ID: ${comics.id}`)}
-        />
+        <Link to={`/comics/${comics.id}`}>
+          <Card
+            image={storeImg}
+            subtitle={`Foto do ${comics.title}`}
+            title={`${comics.title}`}
+          />
+        </Link>
       </div>
     );
   });
@@ -40,6 +44,7 @@ export function HQs() {
 
     const comicList = await api.getAllComics();
     setComics(comicList);
+    console.log(comicList);
 
     setLoading(false);
   };

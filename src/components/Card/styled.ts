@@ -11,7 +11,7 @@ export const Container = styled.div`
   background-color: transparent;
   box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
   transition: all 0.17s ease-in-out;
-  border-radius: 10px;
+  border-radius: 2px;
 
   &:hover {
     transform: scale(1.05);
@@ -23,7 +23,7 @@ export const ImageCard = styled.img`
   height: 100%;
   width: 100%;
   background: #000;
-  border-radius: 10px;
+  border-radius: 2px;
 `;
 
 export const TitleCardArea = styled.div`
@@ -34,12 +34,11 @@ export const TitleCardArea = styled.div`
   position: absolute;
   width: 260px;
   height: 80px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 2px;
 `;
 
 export const TitleCard = styled.p`
   color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 17px;
   padding: 0 15px 0 15px;
 `;

@@ -18,7 +18,7 @@ export function Header() {
             <li>Home</li>
           </Link>
 
-          <Link to="/hqs">
+          <Link to="/comics">
             <li>HQs</li>
           </Link>
 

@@ -12,6 +12,7 @@ const request = axios.create({
   baseURL: "http://gateway.marvel.com/v1/public/",
   params: {
     ts,
+    limit: 28,
     apikey: publicKey,
     hash,
   },
@@ -20,7 +21,13 @@ const request = axios.create({
 export const api = {
   getAllComics: async () => {
     const req = await request(`/comics`);
+    console.log(req);
     return req.data.data.results;
+  },
+
+  getComic: async (id: string | undefined) => {
+    const req = await request(`/comics/${id}`);
+    return req.data.data.results[0];
   },
 };
 

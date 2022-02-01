@@ -19,7 +19,12 @@ export const BodyArea = styled.div`
 export const TitleSection = styled.div`
   display: flex;
   justify-content: center;
-  color: #fff;
+
+  h1 {
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
 `;
 
 export const CardArea = styled.div`
