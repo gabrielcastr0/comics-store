@@ -1,9 +1,14 @@
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import MarvelLogo from "../../assets/img/logo/marvel-logo.png";
 import * as S from "./styled";
 
 export function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
   return (
     <S.Container>
       <S.LeftHeader>
@@ -13,7 +18,7 @@ export function Header() {
       </S.LeftHeader>
 
       <S.RightHeader>
-        <S.MenuOptions>
+        <S.MenuOptions isMobile={isMobile}>
           <Link to="/">
             <li>Home</li>
           </Link>
@@ -26,6 +31,14 @@ export function Header() {
             <li>Sobre</li>
           </Link>
         </S.MenuOptions>
+
+        <S.MobileMenuIcon onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? (
+            <FontAwesomeIcon icon={faTimes} size="1x" inverse />
+          ) : (
+            <FontAwesomeIcon icon={faBars} size="1x" inverse />
+          )}
+        </S.MobileMenuIcon>
       </S.RightHeader>
     </S.Container>
   );

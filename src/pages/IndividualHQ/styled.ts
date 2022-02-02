@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type Props = {
+  price: number;
+};
+
 export const Container = styled.div`
   display: flex;
   padding: 20px;
@@ -84,11 +88,11 @@ export const ButtonsArea = styled.div`
   border-radius: 5px;
 `;
 
-export const ButtonAddToCart = styled.button`
+export const ButtonAddToCart = styled.button<Props>`
   display: flex;
   align-items: center;
   border: 0;
-  background: green;
+  background: ${(props) => (props.price > 0 ? "#00b400" : "gray")};
   box-shadow: 4px 5px 0 #000;
   color: #fff;
   font-size: 22px;

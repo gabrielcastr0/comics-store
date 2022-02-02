@@ -35,10 +35,14 @@ export function IndividualHQ() {
   }, []);
 
   const handleAddToCart = () => {
-    dispatch({
-      type: "ADD_PRODUCT",
-      payload: { comic, qtd },
-    });
+    if (price > 0) {
+      dispatch({
+        type: "ADD_PRODUCT",
+        payload: { comic, qtd },
+      });
+    } else {
+      alert("Indisponível no momento!");
+    }
   };
 
   const handleQtsMinusClick = () => {
@@ -99,7 +103,7 @@ export function IndividualHQ() {
             </S.DescriptionArea>
 
             <S.ButtonsArea>
-              <S.ButtonAddToCart type="button">
+              <S.ButtonAddToCart type="button" price={price}>
                 <S.IconsQtdMinusArea>
                   <FontAwesomeIcon
                     icon={faMinus}
@@ -119,7 +123,11 @@ export function IndividualHQ() {
                 </S.IconsQtdPlusArea>
               </S.ButtonAddToCart>
 
-              <S.ButtonAddToCart type="button" onClick={handleAddToCart}>
+              <S.ButtonAddToCart
+                type="button"
+                onClick={handleAddToCart}
+                price={price}
+              >
                 Adicionar ao Carrinho
               </S.ButtonAddToCart>
             </S.ButtonsArea>
