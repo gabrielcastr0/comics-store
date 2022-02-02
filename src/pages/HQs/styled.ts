@@ -19,9 +19,12 @@ export const BodyArea = styled.div`
 export const TitleSection = styled.div`
   display: flex;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
 
   h1 {
-    color: #fff;
+    color: #000;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -49,8 +52,11 @@ export const LoadingArea = styled.div`
 export const LoadingIcon = styled.div`
   display: flex;
   width: auto;
-  height: 300px;
+  height: 50px;
+  padding: 10px;
   display: flex;
+  background: #fff;
+  border-radius: 70%;
   justify-content: center;
   align-items: center;
   animation: spin infinite 5s linear;

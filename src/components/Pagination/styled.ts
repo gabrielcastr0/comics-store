@@ -22,7 +22,7 @@ export const ListPagination = styled.ul`
     width: 40px;
     cursor: pointer;
     background: #fff;
-    border: 0;
+    border: 2px solid #000;
     border-radius: 5px;
     font-size: 18px;
     position: relative;

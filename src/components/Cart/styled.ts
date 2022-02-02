@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const CartArea = styled.div`
-  background: #e23636;
+  background: rgba(226, 54, 54, 0.8);
   position: fixed;
   bottom: 0;
   right: 30px;
@@ -35,6 +35,8 @@ export const CartText = styled.p`
 
 export const CartBody = styled.div<Props>`
   display: ${(props) => (props.show ? "block" : "none")};
+  max-height: 750px;
+  overflow: auto;
 `;
 
 export const ProductArea = styled.div``;

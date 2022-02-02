@@ -59,12 +59,7 @@ export function HQs() {
         {loading && (
           <S.LoadingArea>
             <S.LoadingIcon>
-              <FontAwesomeIcon
-                icon={faSpinner}
-                size="3x"
-                inverse
-                className="spinner"
-              />
+              <FontAwesomeIcon icon={faSpinner} size="3x" />
             </S.LoadingIcon>
           </S.LoadingArea>
         )}

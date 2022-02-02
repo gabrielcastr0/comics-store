@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
   --background: #504a4a;
@@ -16,7 +17,7 @@ main{
 }
 
 body{
-  background: var(--background);
+  background: url("https://i.pinimg.com/564x/02/35/8f/02358f9ca798487367cd0bd532646c87.jpg");
   min-height: 100vh;
   position: relative;
 }

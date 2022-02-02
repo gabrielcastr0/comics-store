@@ -13,21 +13,21 @@ export const LeftImgArea = styled.div`
 
 export const LeftImg = styled.img`
   width: 550px;
-  height: 705px;
+  height: 720px;
 `;
 
 export const RightArea = styled.div`
   flex: 1;
-  height: 80px;
+  height: 95px;
   margin-left: 10px;
 `;
 
 export const TitleComicArea = styled.div`
   background: #fff;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   border-bottom: 2px solid #fff;
   border-radius: 5px;
 `;
@@ -35,22 +35,25 @@ export const TitleComicArea = styled.div`
 export const TitleComic = styled.h1`
   color: #000;
   font-weight: normal;
+  padding: 0 10px 0 10px;
 `;
 
 export const DescriptionArea = styled.div`
-  /* background: green; */
   flex: 1;
   height: 500px;
   padding: 10px;
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 `;
 
 export const DescriptionText = styled.p`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
   font-size: 20px;
-  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
   color: #fff;
+  text-shadow: 2px 2px 10px #000;
 `;
 
 export const ButtonsArea = styled.div`
@@ -63,18 +66,9 @@ export const ButtonsArea = styled.div`
   border-radius: 5px;
 `;
 
-// export const ButtonBack = styled.button`
-//   border: 0;
-//   background: red;
-//   box-shadow: 4px 5px 0 #000;
-//   color: #fff;
-//   font-size: 22px;
-//   padding: 10px 20px;
-//   margin-left: 10px;
-//   border-radius: 5px;
-// `;
-
 export const ButtonAddToCart = styled.button`
+  display: flex;
+  align-items: center;
   border: 0;
   background: green;
   box-shadow: 4px 5px 0 #000;
@@ -83,6 +77,17 @@ export const ButtonAddToCart = styled.button`
   padding: 10px 20px;
   margin-left: 10px;
   border-radius: 5px;
+  gap: 10px;
+`;
+
+export const IconsQtdMinusArea = styled.div`
+  display: flex;
+`;
+
+export const QtdText = styled.p``;
+
+export const IconsQtdPlusArea = styled.div`
+  display: flex;
 `;
 
 export const LoadingArea = styled.div`

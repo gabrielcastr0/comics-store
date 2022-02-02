@@ -4,7 +4,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.5);
   height: 100px;
   padding: 0 35px 0 35px;
 `;
@@ -29,10 +29,12 @@ export const MenuOptions = styled.ul`
 
   li {
     font-size: 25px;
-    color: #000;
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
+    letter-spacing: 1px;
     cursor: pointer;
+    text-transform: uppercase;
 
     &:hover {
       background: #e23636;

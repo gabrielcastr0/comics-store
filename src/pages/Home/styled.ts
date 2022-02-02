@@ -5,11 +5,6 @@ export const Container = styled.div`
   width: 100%;
   height: calc(100vh - 180px);
   justify-content: center;
-  background: url("https://i.ytimg.com/vi/XGWCi8FhvNI/maxresdefault.jpg")
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   align-items: center;
 `;

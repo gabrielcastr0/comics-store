@@ -10,7 +10,7 @@ export function Footer() {
         Criado com{" "}
         <FontAwesomeIcon
           icon={faHeart}
-          size="sm"
+          size="1x"
           className="spinner"
           color="#e23636"
         />{" "}

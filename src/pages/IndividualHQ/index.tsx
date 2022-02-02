@@ -1,4 +1,4 @@
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faSpinner, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -40,12 +40,7 @@ export function IndividualHQ() {
       {loading && (
         <S.LoadingArea>
           <S.LoadingIcon>
-            <FontAwesomeIcon
-              icon={faSpinner}
-              size="3x"
-              inverse
-              className="spinner"
-            />
+            <FontAwesomeIcon icon={faSpinner} size="3x" className="spinner" />
           </S.LoadingIcon>
         </S.LoadingArea>
       )}
@@ -77,6 +72,18 @@ export function IndividualHQ() {
             </S.DescriptionArea>
 
             <S.ButtonsArea>
+              <S.ButtonAddToCart type="button" onClick={handleAddToCart}>
+                <S.IconsQtdMinusArea>
+                  <FontAwesomeIcon icon={faMinus} size="1x" />
+                </S.IconsQtdMinusArea>
+
+                <S.QtdText>Quantidade: 0</S.QtdText>
+
+                <S.IconsQtdPlusArea>
+                  <FontAwesomeIcon icon={faPlus} size="1x" />
+                </S.IconsQtdPlusArea>
+              </S.ButtonAddToCart>
+
               <S.ButtonAddToCart type="button" onClick={handleAddToCart}>
                 Adicionar ao Carrinho
               </S.ButtonAddToCart>
