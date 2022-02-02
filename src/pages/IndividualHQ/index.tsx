@@ -10,6 +10,9 @@ import * as S from "./styled";
 export function IndividualHQ() {
   const [loading, setLoading] = useState(false);
   const [comic, setComic] = useState<any>({});
+  const [qtd, setQtd] = useState(1);
+  const [price, setPrice] = useState<any>();
+  const [fixPrice, setFixPrice] = useState<any>();
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -17,9 +20,12 @@ export function IndividualHQ() {
     setLoading(true);
 
     console.log(`- ${id}`);
-    const c = await api.getComic(id);
-    setComic(c);
-    console.log(c);
+    const comicRes = await api.getComic(id);
+    setComic(comicRes);
+    setFixPrice(comicRes.prices[0].price);
+    setPrice(comicRes.prices[0].price);
+    console.log(price);
+    console.log(comicRes);
 
     setLoading(false);
   };
@@ -31,8 +37,20 @@ export function IndividualHQ() {
   const handleAddToCart = () => {
     dispatch({
       type: "ADD_PRODUCT",
-      payload: { comic },
+      payload: { comic, qtd },
     });
+  };
+
+  const handleQtsMinusClick = () => {
+    if (qtd > 1) {
+      setQtd(qtd - 1);
+    }
+  };
+
+  const handleQtsPlusClick = () => {
+    setQtd(qtd + 1);
+    setPrice(price + fixPrice);
+    console.log(price);
   };
 
   return (
@@ -69,18 +87,35 @@ export function IndividualHQ() {
                   ? comic.textObjects[0].text
                   : "Sem descrição"}
               </S.DescriptionText>
+
+              <S.PriceText>
+                Preço:
+                <span>
+                  {price > 0
+                    ? `R$ ${price.toFixed(2)}`
+                    : "Indisponível no momento!"}
+                </span>
+              </S.PriceText>
             </S.DescriptionArea>
 
             <S.ButtonsArea>
-              <S.ButtonAddToCart type="button" onClick={handleAddToCart}>
+              <S.ButtonAddToCart type="button">
                 <S.IconsQtdMinusArea>
-                  <FontAwesomeIcon icon={faMinus} size="1x" />
+                  <FontAwesomeIcon
+                    icon={faMinus}
+                    size="1x"
+                    onClick={handleQtsMinusClick}
+                  />
                 </S.IconsQtdMinusArea>
 
-                <S.QtdText>Quantidade: 0</S.QtdText>
+                <S.QtdText>Quantidade: {qtd}</S.QtdText>
 
                 <S.IconsQtdPlusArea>
-                  <FontAwesomeIcon icon={faPlus} size="1x" />
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    size="1x"
+                    onClick={handleQtsPlusClick}
+                  />
                 </S.IconsQtdPlusArea>
               </S.ButtonAddToCart>
 

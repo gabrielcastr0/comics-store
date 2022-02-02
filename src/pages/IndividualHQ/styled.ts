@@ -36,6 +36,7 @@ export const TitleComic = styled.h1`
   color: #000;
   font-weight: normal;
   padding: 0 10px 0 10px;
+  font-size: 25px;
 `;
 
 export const DescriptionArea = styled.div`
@@ -43,8 +44,9 @@ export const DescriptionArea = styled.div`
   height: 500px;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   background: rgba(0, 0, 0, 0.7);
+  gap: 15px;
 `;
 
 export const DescriptionText = styled.p`
@@ -54,6 +56,22 @@ export const DescriptionText = styled.p`
   font-family: "Roboto", sans-serif;
   color: #fff;
   text-shadow: 2px 2px 10px #000;
+`;
+
+export const PriceText = styled.p`
+  display: flex;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
+  gap: 5px;
+
+  span {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
 `;
 
 export const ButtonsArea = styled.div`
@@ -78,6 +96,7 @@ export const ButtonAddToCart = styled.button`
   margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
+  cursor: pointer;
 `;
 
 export const IconsQtdMinusArea = styled.div`

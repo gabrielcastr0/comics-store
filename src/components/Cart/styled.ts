@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const CartArea = styled.div`
-  background: rgba(226, 54, 54, 0.8);
+  background: rgba(226, 54, 54, 1);
   position: fixed;
   bottom: 0;
   right: 30px;
@@ -57,6 +57,32 @@ export const ProductInfoArea = styled.div`
 `;
 
 export const ProductName = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-weight: bold;
+`;
+
+export const ProductPrice = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+`;
+
+export const ProductQuantityArea = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const ProductQtText = styled.p`
+  font-size: 18px;
+  margin: 0 10px;
   color: #fff;
 `;
