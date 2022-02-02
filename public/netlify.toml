@@ -1,2 +1,14 @@
 [[plugins]]
   package = "netlify-plugin-prettier"
+
+[[redirects]]
+  from = "https://neoapp-marvel.netlify.app/*"
+  to = "http://gateway.marvel.com/v1/public/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://neoapp-marvel.netlify.app/*"
+  to = "http://gateway.marvel.com/v1/public/:splat"
+  status = 301
+  force = true
