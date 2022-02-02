@@ -6032,11 +6032,6 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-netlify-plugin-prettier@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/netlify-plugin-prettier/-/netlify-plugin-prettier-0.0.1.tgz#8777e1a51f01f0e66557938f6673abad63e85578"
-  integrity sha512-Rr/UMMevIwgaYoI5lIqegwewiBq7oXsxp/8o9TUUKEsna+Uztkk0ENGsA/39+5ueIOJ7zzRl7MWgH1f/w4KSGw==
-
 no-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/no-case/-/no-case-3.0.4.tgz"
