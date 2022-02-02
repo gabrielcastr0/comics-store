@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { faSpinner, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
@@ -12,7 +13,7 @@ export function IndividualHQ() {
   const [comic, setComic] = useState<any>({});
   const [qtd, setQtd] = useState(1);
   const [price, setPrice] = useState<any>();
-  const [fixPrice, setFixPrice] = useState<any>();
+  const [fixPrice, setFixPrice] = useState<number>();
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -24,7 +25,8 @@ export function IndividualHQ() {
     setComic(comicRes);
     setFixPrice(comicRes.prices[0].price);
     setPrice(comicRes.prices[0].price);
-    console.log(price);
+    console.log(typeof price);
+    console.log(typeof fixPrice);
     console.log(comicRes);
 
     setLoading(false);
