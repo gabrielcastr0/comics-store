@@ -1,1 +1,4 @@
 /*    /index.html   200
+
+# other URLS might proxy or redirect offsite
+https://neoapp-marvel.netlify.app/* http://gateway.marvel.com/v1/public/:splat 200
