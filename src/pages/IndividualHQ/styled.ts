@@ -115,7 +115,7 @@ export const ButtonsArea = styled.div`
   border-radius: 5px;
   margin-bottom: 35px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     flex-direction: column;
     gap: 10px;
     padding: 25px 0 25px 0px;
@@ -135,6 +135,10 @@ export const ButtonAddToCart = styled.button<Props>`
   border-radius: 5px;
   gap: 10px;
   cursor: pointer;
+
+  @media screen and (max-width: 425px) {
+    margin-right: 10px;
+  }
 `;
 
 export const IconsQtdMinusArea = styled.div`
