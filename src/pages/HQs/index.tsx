@@ -15,7 +15,7 @@ export function HQs() {
   const [loading, setLoading] = useState(false);
   const [comics, setComics] = useState<HQTypes[]>([]);
   const [offset, setOffset] = useState<number>(0);
-  const [count, setCount] = useState();
+  const [count, setCount] = useState<number>(0);
 
   const displayComics = comics.map((comics) => {
     const storeImg = `${comics.thumbnail.path}.${comics.thumbnail.extension}`;
