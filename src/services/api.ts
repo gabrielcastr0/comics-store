@@ -8,25 +8,33 @@ const ts = Number(new Date());
 
 const hash = md5(ts + privateKey + publicKey);
 
-const request = axios.create({
-  baseURL: "https://gateway.marvel.com/v1/public/",
-  params: {
-    ts,
-    limit: 50,
-    offset: 100,
-    apikey: publicKey,
-    hash,
-  },
-});
-
 export const api = {
-  getAllComics: async () => {
+  getAllComics: async (offset: number | undefined) => {
+    const request = axios.create({
+      baseURL: "https://gateway.marvel.com/v1/public/",
+      params: {
+        ts,
+        limit: 8,
+        offset,
+        apikey: publicKey,
+        hash,
+      },
+    });
+    
     const req = await request(`/comics`);
     console.log(req);
-    return req.data.data.results;
+    return req.data.data;
   },
 
   getComic: async (id: string | undefined) => {
+    const request = axios.create({
+      baseURL: "https://gateway.marvel.com/v1/public/",
+      params: {
+        ts,
+        apikey: publicKey,
+        hash,
+      },
+    });
     const req = await request(`/comics/${id}`);
     return req.data.data.results[0];
   },

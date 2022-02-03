@@ -9,21 +9,15 @@ import api from "../../services/api";
 import { HQTypes } from "../../types/HQTypes";
 import * as S from "./styled";
 
+const LIMIT = 8;
+
 export function HQs() {
   const [loading, setLoading] = useState(false);
   const [comics, setComics] = useState<HQTypes[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [comicsPerPage] = useState(8);
+  const [offset, setOffset] = useState<number>(0);
+  const [count, setCount] = useState();
 
-  const indexOfLastComic = currentPage * comicsPerPage;
-  const indexOfFirsComic = indexOfLastComic - comicsPerPage;
-  const currentComics = comics.slice(indexOfFirsComic, indexOfLastComic);
-
-  const paginate = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const displayComics = currentComics.map((comics) => {
+  const displayComics = comics.map((comics) => {
     const storeImg = `${comics.thumbnail.path}.${comics.thumbnail.extension}`;
 
     return (
@@ -39,19 +33,20 @@ export function HQs() {
     );
   });
 
-  const loadComics = async () => {
+  const loadComics = async (offset: number | undefined) => {
     setLoading(true);
 
-    const comicList = await api.getAllComics();
-    setComics(comicList);
+    const comicList = await api.getAllComics(offset);
+    setComics(comicList.results);
+    setCount(comicList.total);
     console.log(comicList);
 
     setLoading(false);
   };
 
   useEffect(() => {
-    loadComics();
-  }, []);
+    loadComics(offset);
+  }, [offset]);
 
   return (
     <S.Container>
@@ -70,9 +65,10 @@ export function HQs() {
 
         <S.CardArea>{displayComics}</S.CardArea>
         <Pagination
-          comicsPerPage={comicsPerPage}
-          totalComics={comics.length}
-          paginate={paginate}
+          limit={LIMIT}
+          total={count}
+          offset={offset}
+          setOffset={setOffset}
         />
       </S.BodyArea>
     </S.Container>
