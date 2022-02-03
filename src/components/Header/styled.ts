@@ -11,6 +11,10 @@ export const Container = styled.header`
   background: rgba(0, 0, 0, 0.5);
   height: 100px;
   padding: 0 35px 0 35px;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const LogoHeader = styled.img`
@@ -33,9 +37,10 @@ export const MenuOptions = styled.ul<Props>`
     list-style: none;
     background: rgba(0, 0, 0, 0.7);
     left: 0;
-    width: 94.3%;
-    top: 105px;
+    width: 100%;
+    top: 100px;
     transition: all 0.5s ease-out;
+    padding: 0;
   }
 
   a {
@@ -53,8 +58,10 @@ export const MenuOptions = styled.ul<Props>`
     @media screen and (max-width: 768px) {
       margin-top: 5px;
       margin-bottom: 5px;
-      width: 90%;
+      left: 0;
       transition: all 0.5 ease;
+      position: relative;
+      text-align: center;
     }
 
     &:hover {

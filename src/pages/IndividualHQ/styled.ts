@@ -7,23 +7,45 @@ type Props = {
 export const Container = styled.div`
   display: flex;
   padding: 20px;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const LeftImgArea = styled.div`
-  height: 705px;
+  display: flex;
+  height: auto;
   width: 550px;
   border: 0;
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export const LeftImg = styled.img`
   width: 550px;
   height: 720px;
+
+  @media screen and (max-width: 425px) {
+    width: 350px;
+    height: 520px;
+  }
 `;
 
 export const RightArea = styled.div`
   flex: 1;
   height: 95px;
   margin-left: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 20px 10px 0 0;
+  }
 `;
 
 export const TitleComicArea = styled.div`
@@ -56,15 +78,16 @@ export const DescriptionArea = styled.div`
 export const DescriptionText = styled.p`
   @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   color: #fff;
   text-shadow: 2px 2px 10px #000;
+  overflow: auto;
 `;
 
 export const PriceText = styled.p`
   display: flex;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   color: #fff;
   text-shadow: 2px 2px 10px #000;
@@ -72,7 +95,6 @@ export const PriceText = styled.p`
 
   span {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
     color: #fff;
     font-weight: bold;
   }
@@ -86,6 +108,12 @@ export const ButtonsArea = styled.div`
   background: #fff;
   height: 100px;
   border-radius: 5px;
+
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0 25px 0px;
+  }
 `;
 
 export const ButtonAddToCart = styled.button<Props>`

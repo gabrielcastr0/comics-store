@@ -17,6 +17,10 @@ export const BodyArea = styled.div`
   background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 5px;
+
+  @media screen and (max-width: 425px) {
+    width: 300px;
+  }
 `;
 
 export const TitleBody = styled.h1`
@@ -24,6 +28,11 @@ export const TitleBody = styled.h1`
   text-transform: uppercase;
   font-size: 80px;
   color: #fff;
+
+  @media screen and (max-width: 425px) {
+    font-size: 35px;
+    text-align: center;
+  }
 
   span {
     border-top: 10px solid #fff;
@@ -36,4 +45,9 @@ export const DescBody = styled.h2`
   color: #fff;
   font-weight: normal;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;

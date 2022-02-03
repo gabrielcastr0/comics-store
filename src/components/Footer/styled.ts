@@ -10,6 +10,10 @@ export const Container = styled.footer`
   left: 0;
   bottom: 0;
   position: absolute;
+
+  @media screen and (max-width: 768px) {
+    height: 140px;
+  }
 `;
 
 export const CreditsText = styled.p`
