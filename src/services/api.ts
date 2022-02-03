@@ -12,7 +12,8 @@ const request = axios.create({
   baseURL: "https://gateway.marvel.com/v1/public/",
   params: {
     ts,
-    limit: 28,
+    limit: 50,
+    offset: 100,
     apikey: publicKey,
     hash,
   },

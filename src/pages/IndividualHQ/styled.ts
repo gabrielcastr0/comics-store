@@ -35,6 +35,11 @@ export const LeftImg = styled.img`
     width: 350px;
     height: 520px;
   }
+
+  @media screen and (max-width: 320px) {
+    width: 250px;
+    height: 420px;
+  }
 `;
 
 export const RightArea = styled.div`
@@ -44,7 +49,7 @@ export const RightArea = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    margin: 20px 10px 0 0;
+    margin: 20px 0 0 0;
   }
 `;
 
@@ -108,6 +113,7 @@ export const ButtonsArea = styled.div`
   background: #fff;
   height: 100px;
   border-radius: 5px;
+  margin-bottom: 35px;
 
   @media screen and (max-width: 375px) {
     flex-direction: column;

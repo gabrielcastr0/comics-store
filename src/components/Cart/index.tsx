@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable array-callback-return */
 /* eslint-disable react/no-array-index-key */
@@ -22,6 +23,10 @@ export function Cart() {
   const handleCartClick = () => {
     setShow(!show);
   };
+
+  const handleClickButton = () => {
+    alert(`Você efetuou a compra de ${products.length} ${products.length === 1 ? 'HQ!' : 'HQs!'}`);
+  }
 
   const handleProductChange = (key: any, type: any) => {
     dispatch({
@@ -85,6 +90,13 @@ export function Cart() {
               </S.ProductQuantityArea>
             </S.ProductItem>
           ))}
+
+          {products.length > 0 && (
+            <S.ButtonFinishArea>
+              <S.ButtonFinish onClick={handleClickButton}>Finalizar compra</S.ButtonFinish>
+            </S.ButtonFinishArea>
+          )}
+
         </S.ProductArea>
       </S.CartBody>
     </S.CartArea>

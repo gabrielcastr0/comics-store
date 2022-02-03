@@ -21,6 +21,10 @@ export const BodyArea = styled.div`
   @media screen and (max-width: 425px) {
     width: 300px;
   }
+
+  @media screen and (max-width: 320px) {
+    width: 240px;
+  }
 `;
 
 export const TitleBody = styled.h1`

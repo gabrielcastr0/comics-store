@@ -14,6 +14,10 @@ export const BodyArea = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 320px){
+    padding: 0;
+  }
 `;
 
 export const TitleSection = styled.div`
@@ -22,6 +26,7 @@ export const TitleSection = styled.div`
   background: rgba(255, 255, 255, 0.8);
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
 
   h1 {
     color: #000;
@@ -37,6 +42,10 @@ export const CardArea = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   margin: 25px 0 150px 0;
+
+  @media screen and (max-width: 768px){
+    margin-bottom: 230px;
+  }
 `;
 
 export const LoadingArea = styled.div`

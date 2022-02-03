@@ -17,11 +17,12 @@ export const CartHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 250px;
+  width: auto;
   height: 50px;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 10px 10px 0 0;
+  gap: 15px;
 `;
 
 export const CartIconShop = styled.div``;
@@ -85,4 +86,20 @@ export const ProductQtText = styled.p`
   font-size: 18px;
   margin: 0 10px;
   color: #fff;
+`;
+
+export const ButtonFinishArea = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* background: blue; */
+  padding: 0 10px 10px 10px;
+`;
+
+export const ButtonFinish = styled.button`
+  background: green;
+  height: 35px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
 `;

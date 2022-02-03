@@ -81,7 +81,7 @@ export const MobileMenuIcon = styled.button`
     font-size: 30px;
     border: none;
     outline: none;
-    top: 30px;
+    top: 25px;
     right: 25px;
   }
 `;

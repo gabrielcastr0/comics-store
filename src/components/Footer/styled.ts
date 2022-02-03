@@ -22,4 +22,9 @@ export const CreditsText = styled.p`
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 23px;
+  text-align: center;
+
+  @media screen and (max-width: 320px){
+    margin-bottom: 30px;
+  }
 `;

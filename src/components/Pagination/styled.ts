@@ -17,6 +17,14 @@ export const ListPagination = styled.ul`
   list-style-type: none;
   gap: 5px;
 
+  @media screen and (max-width: 768px){
+    margin-bottom: 135px;
+  }
+
+  @media screen and (max-width: 320px){
+    gap: 0px;
+  }
+
   button {
     height: 40px;
     width: 40px;
