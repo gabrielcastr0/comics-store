@@ -5,10 +5,10 @@ const MAX_ITEMS = 9;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
 
 type Props = {
-  limit: any;
-  total: any;
-  offset: any;
-  setOffset: any;
+  limit: number;
+  total: number;
+  offset: number;
+  setOffset: (...args: number[]) => void;
 };
 
 export function Pagination({ limit, total, setOffset, offset }: Props) {
