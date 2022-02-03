@@ -28,7 +28,7 @@ Link: https://neoapp-marvel.netlify.app/
 
 ### Inspirações
 
-Bom, após ler os desafios propostos e tecnologias que deveriam ser utilizadas, comecei a estruturar o que iria fazer. Antes de começar, fiz alguns rabiscos no figma, mas logo depois acabei deletando e indo pela intuição mesmo. Fui testando maneiras diferentes de interface, até que chegasse em um ponto que me agradasse, pois sei que uma boa UI é de extrema importância. Sobre as partes funcionais do projeto (requisições, carrinho, etc), gostei bastante da experiência, pois acredito que pude colocar muitos conceitos em prática. 
+Bom, após ler os desafios propostos e tecnologias que deveriam ser utilizadas, comecei a estruturar o que iria fazer. Fui testando maneiras diferentes de interface, até que chegasse em um ponto que me agradasse, pois sei que uma boa UI é de extrema importância. Sobre as partes funcionais do projeto (requisições, carrinho, etc), gostei bastante da experiência, pois acredito que pude colocar muitos conceitos em prática. 
 Enfim, acredito que o resultado ficou bem legal, e espero que vocês gostem :)  
 ### Autor
 
