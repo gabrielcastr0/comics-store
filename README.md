@@ -4,7 +4,7 @@
 
 Link: https://neoapp-marvel.netlify.app/
 
-<a href="https://awesome-github-readme-profile.netlify.app"><img src="https://raw.githubusercontent.com/gabrielcastr0/neoapp-marvel/main/banner.png" alt="Banner NeoApp | Marvel" /></a>
+<img src="./banner.png" alt="Banner NeoApp | Marvel" />
 
 ### Features
 
