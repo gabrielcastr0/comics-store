@@ -26,10 +26,6 @@ export function Header() {
           <Link to="/comics">
             <li>HQs</li>
           </Link>
-
-          <Link to="/about">
-            <li>Sobre</li>
-          </Link>
         </S.MenuOptions>
 
         <S.MobileMenuIcon onClick={() => setIsMobile(!isMobile)}>
