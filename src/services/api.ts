@@ -22,7 +22,6 @@ export const api = {
     });
     
     const req = await request(`/comics`);
-    console.log(req);
     return req.data.data;
   },
 

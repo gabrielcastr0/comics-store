@@ -17,7 +17,6 @@ export default (state: any = initialState, action: any) => {
   switch (action.type) {
     case "ADD_PRODUCT":
       const { id } = action.payload.comic;
-      console.log(id);
 
       const index = products.findIndex((item) => item.id === id);
       if (index > -1) {
@@ -28,8 +27,6 @@ export default (state: any = initialState, action: any) => {
           qtd: action.payload.qtd,
         });
       }
-
-      console.log(products);
 
       return { ...state, products };
       break;

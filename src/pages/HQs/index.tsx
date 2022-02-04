@@ -39,7 +39,6 @@ export function HQs() {
     const comicList = await api.getAllComics(offset);
     setComics(comicList.results);
     setCount(comicList.total);
-    console.log(comicList);
 
     setLoading(false);
   };

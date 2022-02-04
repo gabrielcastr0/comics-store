@@ -21,14 +21,10 @@ export function IndividualHQ() {
   const loadComic = async (id: string | undefined) => {
     setLoading(true);
 
-    console.log(`- ${id}`);
     const comicRes = await api.getComic(id);
     setComic(comicRes);
     setFixPrice(comicRes.prices[0].price);
     setPrice(comicRes.prices[0].price);
-    console.log(typeof price);
-    console.log(typeof fixPrice);
-    console.log(comicRes);
 
     setLoading(false);
   };
@@ -57,7 +53,6 @@ export function IndividualHQ() {
   const handleQtsPlusClick = () => {
     setQtd(qtd + 1);
     setPrice(price + fixPrice);
-    console.log(price);
   };
 
   return (
