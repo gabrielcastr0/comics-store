@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import * as S from "./styled";
 
-const MAX_ITEMS = 9;
+const MAX_ITEMS = 7;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
 
 type Props = {

@@ -25,7 +25,15 @@ export const ListPagination = styled.ul`
     margin-bottom: 135px;
   }
 
+  @media screen and (max-width: 425px){
+    position: absolute;
+    width: 300px;
+    flex-wrap: wrap;
+  }
+
   @media screen and (max-width: 320px){
+    margin-top: 25px;
+    width: 250px;
     gap: 0px;
   }
 `;
