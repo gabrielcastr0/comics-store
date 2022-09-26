@@ -24,7 +24,7 @@ yarn start
 
 ### **Site**
 
-Link: https://neoapp-marvel.netlify.app/
+Link: https://loja-de-quadrinhos.netlify.app/
 
 <img src="./banner.png" alt="Banner NeoApp | Marvel" />
 
