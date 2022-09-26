@@ -1,4 +1,4 @@
-<h1 align="center">NeoApp | Marvel</h1>
+<h1 align="center">Loja de Quadrinhos | Marvel</h1>
 
 ### **Como rodar o projeto?**
 
